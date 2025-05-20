@@ -4,6 +4,7 @@
     git
     helix
     texliveFull
+    rustup
   ];  
 
   environment.variables.EDITOR = "hx";
