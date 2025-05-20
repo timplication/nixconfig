@@ -5,6 +5,7 @@
     helix
     texliveFull
     rustup
+    lldb
   ];  
 
   environment.variables.EDITOR = "hx";
