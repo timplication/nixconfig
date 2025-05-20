@@ -1,0 +1,21 @@
+theme = "catppuccin_latte"
+
+[editor]
+true-color = true
+cursorline = true
+color-modes = true
+end-of-line-diagnostics = "hint"
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = ""
+
+[editor.lsp]
+display-inlay-hints = true
+snippets = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.indent-guides]
+render = true

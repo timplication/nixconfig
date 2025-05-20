@@ -1,0 +1,62 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // Choose the order of the modules
+    "modules-left": ["niri/workspaces", "niri/window"],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "pulseaudio/slider", "clock", "tray"],
+    "niri/workspaces": {
+         "format": " {icon} ",
+         "format-icons": {
+            "default": "⬤",
+            "1": "❶", 
+            "2": "❷",
+            "3": "❸",
+            "4": "❹",
+            "5": "❺",
+            "6": "❻",
+            "7": "❼",
+            "8": "❽",
+            "9": "❾"
+         },
+     },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "niri/window": {
+        "icon": true,
+        "format": "{}",
+        "icon-size": 16,
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "$1",
+            "tim@axiom: (.*)": "$1"
+        }
+    },
+    "clock": {
+        "timezone": "Europe/Brussels",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": " {:%d.%m.%Y}",
+        "format": " {:%H:%M}"
+    },
+    "pulseaudio": {
+        "format": "{icon}",  
+        "format-bluetooth": "{icon} ",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+    },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+}

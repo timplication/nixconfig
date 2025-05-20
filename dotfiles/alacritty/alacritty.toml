@@ -1,0 +1,11 @@
+[general]
+import = [
+  "~/.config/alacritty/catppuccin-latte.toml"
+]
+
+[window]
+padding = { x = 4, y = 4 }
+decorations = "None"
+
+[font]
+size = 14.0

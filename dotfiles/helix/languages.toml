@@ -1,0 +1,14 @@
+[[language]]
+name = "latex"
+text-width = 100
+soft-wrap.wrap-at-text-width = true
+
+[[language]]
+name = "markdown"
+text-width = 100
+soft-wrap.wrap-at-text-width = true
+
+[[language]]
+name = "typst"
+text-width = 100
+soft-wrap.wrap-at-text-width = true

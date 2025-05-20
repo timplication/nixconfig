@@ -1,0 +1,100 @@
+@import "latte.css";
+
+* {
+  font-size: 14px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
+  color: @text;
+  margin: 5px 5px;
+}
+
+#workspaces {
+  border-radius: 5px;
+  background-color: @surface0;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+#workspaces button {
+  color: @lavender;
+  border-radius: 5px;
+  padding: 0.4rem;
+}
+
+#workspaces button.active {
+  color: @sky;
+  border-radius: 5px;
+}
+
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 5px;
+}
+
+#tray,
+#window,
+#clock {
+  margin-top: 5px;
+  background-color: @surface0;
+  padding: 0.5rem 1rem;
+}
+
+#window {
+  border-radius: 5px;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#pulseaudio {
+  margin-top: 5px;
+  background-color: @surface0;
+  border-radius: 5px 0px 0px 5px;
+  padding: 0.25rem 5px 0.25rem 0.5rem;
+  color: @lavender;
+  min-width: 20px;
+}
+
+#pulseaudio-slider {
+  margin-top: 5px;
+  background-color: @surface0;
+  padding: 0.25rem 0.25rem 0.25rem 0;
+}
+
+#pulseaudio-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+  min-height: 10px;
+  min-width: 80px;
+  border-radius: 5px;
+  background-color: @surface2;
+  border-color: @surface1;
+}
+
+#pulseaudio-slider highlight {
+  min-width: 5px;
+  border-radius: 5px;
+  background-color: @lavender; 
+}
+
+#clock {
+  color: @blue;
+  border-radius: 0px 5px 5px 0px;
+  margin-right: 5px;
+}
+
+#tray {
+  margin-right: 5px;
+  border-radius: 5px;
+}

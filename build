@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# build the configuration
+nix-build -A axiom.config.system.build.toplevel

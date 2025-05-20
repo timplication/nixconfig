@@ -1,0 +1,81 @@
+{
+  "pins": {
+    "home-manager": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "home-manager"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "e95a7c5b6fa93304cd2fd78cf676c4f6d23c422c",
+      "url": "https://github.com/nix-community/home-manager/archive/e95a7c5b6fa93304cd2fd78cf676c4f6d23c422c.tar.gz",
+      "hash": "0w6ydyqb950mdvyb4zygzbcdnpmmmkllmn1flp3xa7s463zg65vb"
+    },
+    "lix": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "Forgejo",
+        "server": "https://git.lix.systems/",
+        "owner": "lix-project",
+        "repo": "lix"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "2.92.0",
+      "revision": "2837da71ec1588c1187d2e554719b15904a46c8b",
+      "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/2.92.0.tar.gz",
+      "hash": "126vm9m517gwfqdy1c4zghzk3w3xfahhhjawkqmkjxrq9w08h8h8"
+    },
+    "lix-module": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "Forgejo",
+        "server": "https://git.lix.systems/",
+        "owner": "lix-project",
+        "repo": "nixos-module"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "2.92.0-3",
+      "revision": "868d97695bab9d21f6070b03957bcace249fbe3c",
+      "url": "https://git.lix.systems/api/v1/repos/lix-project/nixos-module/archive/2.92.0-3.tar.gz",
+      "hash": "0yi28psklcdxgn8aqcg4cgf5cq1dwvm5i5nqyv7crf1ml5jg16ky"
+    },
+    "nixpkgs": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "NixOS",
+        "repo": "nixpkgs"
+      },
+      "branch": "nixos-unstable",
+      "submodules": false,
+      "revision": "dda3dcd3fe03e991015e9a74b22d35950f264a54",
+      "url": "https://github.com/NixOS/nixpkgs/archive/dda3dcd3fe03e991015e9a74b22d35950f264a54.tar.gz",
+      "hash": "05x5s520m4wzi7xxkzlfcq3dvkkz8qr9bp4rm36mrhns66n1vbai"
+    },
+    "npins": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "andir",
+        "repo": "npins"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "0.3.1",
+      "revision": "476671559d5879ad2f95fe21b9eb7c7541b3e718",
+      "url": "https://api.github.com/repos/andir/npins/tarball/0.3.1",
+      "hash": "0dcikavc1ihwwg7lm3009h61ibla16zik7pi6pxpacv9xmakvy9w"
+    }
+  },
+  "version": 5
+}
