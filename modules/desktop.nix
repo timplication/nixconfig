@@ -13,14 +13,21 @@
     libnotify      # facilities for sending notifications 
     wl-clipboard   # clipboard integration
 
+    # TUI applications
+    spotify-player
+
     # GUI Applications
-    alacritty
+    ghostty
     firefox-wayland
     papers
     nautilus
     spotify
     anytype
   ];
+
+  environment.variables."GDK_DEBUG" = "";
+  environment.variables."GDK_DISABLE" = "";
+  environment.variables."GSK_RENDERER" = "vulkan";
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 

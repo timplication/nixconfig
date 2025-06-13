@@ -12,25 +12,124 @@
     videos = "${config.home.homeDirectory}/media";
   };
 
-  xdg.configFile."alacritty".source = ../dotfiles/alacritty;
   xdg.configFile."niri".source = ../dotfiles/niri;  
   xdg.configFile."fuzzel".source = ../dotfiles/fuzzel;
   xdg.configFile."waybar".source = ../dotfiles/waybar;
-  xdg.configFile."helix".source = ../dotfiles/helix;
   xdg.configFile."dunst".source = ../dotfiles/dunst;
+  xdg.configFile."ghostty".source = ../dotfiles/ghostty;
+  xdg.configFile."starship.toml".source = ../dotfiles/starship/starship.toml;
 
   gtk = {
     enable = true;  
 
-    cursorTheme = {
-      package = pkgs.catppuccin-cursors.latteMauve;
-      name = "catppuccin-latte-mauve-cursors";
-      size = 16;
-    };
-
     iconTheme = {
       package = pkgs.adwaita-icon-theme;  
       name = "Adwaita";
+    };
+  };
+
+  home.pointerCursor = {
+    enable = true;
+    gtk.enable = true;
+    package = pkgs.adwaita-icon-theme;
+    name = "Adwaita";
+    size = 16;
+  };
+
+  dconf.settings = {
+    "org/gnome/mutter" = {
+      experimental-features = [ "scale-monitor-framebuffer" ];
+    }; 
+    "org/gnome/desktop/interface" = {
+      cursor-size = 16;
+    };
+  };
+
+  home.shell.enableNushellIntegration = true;
+
+  programs.nushell = {
+    enable = true;
+    extraConfig = ''
+      let carapace_completer = {|spans|
+        carapace $spans.0 nushell ...$spans | from json
+      }
+      $env.config = {
+        show_banner: false,
+        completions: {
+          case_sensitive: false
+          quick: true
+          partial: true
+          algorithm: "fuzzy"    
+          external: {
+            # set to false to prevent nushell looking into $env.PATH to find more suggestions
+            enable: true 
+            # set to lower can improve completion performance at the cost of omitting some options
+            max_results: 100 
+            completer: $carapace_completer 
+          }
+        }
+      } 
+      source ${../dotfiles/nushell/themes/catppuccin_latte.nu}
+    '';
+  };
+
+  programs.carapace = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
+
+  programs.starship = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
+
+  programs.helix = {
+    enable = true;
+    defaultEditor = true;
+    settings = {
+      theme = "catppuccin_latte";
+      editor = {
+        true-color = true;
+        cursorline = true;
+        color-modes = true;
+        soft-wrap.enable = true;
+        soft-wrap.wrap-indicator = "";
+        lsp.snippets = true;
+      };   
+    };
+    languages = {
+      language-server.rust-analyzer = {
+        check = {
+          command = "clippy";
+        };
+        cargo = {
+          features = "all";
+        };
+      };
+
+      language = [
+        {
+          name = "latex";
+          text-width = 100;
+          soft-wrap.wrap-at-text-width = true;
+        }
+        {
+          name = "markdown";
+          text-width = 100;
+          soft-wrap.wrap-at-text-width = true;
+        }
+        {
+          name = "typst";
+          text-width = 100;
+          soft-wrap.wrap-at-text-width = true;
+        }
+        {
+          name = "rust";
+          language-servers = ["rust-analyzer"];
+          text-width = 100;
+          soft-wrap.wrap-at-text-width = true;
+        }
+      ];
     };
   };
   

@@ -17,7 +17,7 @@ in
     # the reason is that the system clock may be incorrect after booting from windows
     # back into NixOS, because Windows by default uses RTC as its time standard. Hence,
     # to be compatible with windows, we enable RTC as time standard on NixOS as well.
-    # time.hardwareClockInLocalTime = cfg.dualboot;
+    time.hardwareClockInLocalTime = cfg.dualboot;
 
     time.timeZone = "Europe/Brussels";
 
