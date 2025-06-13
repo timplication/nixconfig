@@ -1,0 +1,22 @@
+# Window
+window-decoration = false
+window-padding-balance = true
+window-padding-x = 3,3
+window-padding-y = 3,3
+
+# Font
+font-family = "Iosevka SS18 Medium"
+font-family-bold = "Iosevka SS18 Extrabold"
+font-family-italic = "Iosevka SS18 Medium Italic"
+font-family-bold-italic = "Iosevka SS18 Extrabold Italic"
+font-size = 14
+
+# Theme
+theme = "catppuccin-latte"
+
+# Cursor
+cursor-style = block
+
+# Mouse
+mouse-hide-while-typing = true
+copy-on-select = true

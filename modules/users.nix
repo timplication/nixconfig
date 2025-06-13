@@ -1,7 +1,8 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   config = {
     users.users."tim" = {
+      shell = pkgs.nushell;
       isNormalUser = true;
       description = "tim";
       extraGroups = [ "wheel" ];
