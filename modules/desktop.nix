@@ -22,7 +22,7 @@
     papers
     nautilus
     spotify
-    anytype
+    obsidian
   ];
 
   environment.variables."GDK_DEBUG" = "";
