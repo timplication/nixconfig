@@ -125,7 +125,7 @@ layout {
     focus-ring {
         width 2
         // active-color "#9ca0b0"
-        active-color "#8839ef"
+        active-color "#04a5e5"
     }
 
     border {        
@@ -172,7 +172,7 @@ layout {
     }
 
     insert-hint {
-        color "#8839ef"
+        color "#04a5e5"
     }
 
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
