@@ -6,7 +6,6 @@
   ...
 }:
 let
-  extra-plymouth-themes = pkgs.adi1090x-plymouth-themes.override { selected_themes = [ "motion" ]; };
   iosevka-aile = pkgs.iosevka-bin.override { variant = "Aile"; };
 in
 {
@@ -39,10 +38,7 @@ in
   ];
 
   boot.plymouth.enable = true;  
-  environment.systemPackages = [ extra-plymouth-themes ];
-  boot.plymouth.themePackages = [ extra-plymouth-themes ];
   boot.plymouth.font = "${iosevka-aile}/share/fonts/truetype/IosevkaAile-Medium.ttc";
-  boot.plymouth.theme = "motion";
 
   #
   # Disk Encryption & Software RAID
